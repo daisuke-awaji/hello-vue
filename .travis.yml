@@ -4,10 +4,10 @@ node_js:
 dist: trusty
 addons:
   apt:
-  sources:
-    - google-chrome
-  packages:
-    - google-chrome-stable
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 sudo: false
 cache:
   directories:
