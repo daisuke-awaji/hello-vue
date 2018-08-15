@@ -1,9 +1,12 @@
 language: node_js
 node_js:
   - "6"
+addons:
+  chrome: stable
 dist: trusty
 sudo: false
 cache: npm
+script: npm run test-travis
 notifications:
   email:
     on_success: never

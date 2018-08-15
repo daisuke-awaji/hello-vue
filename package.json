@@ -11,7 +11,9 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "unit-conv": "jest --config test/unit/jest.conf.js --coverage && cat test/unit/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test-travis": "npm run unit-conv && npm run e2e"
   },
   "dependencies": {
     "vue": "^2.5.2",
