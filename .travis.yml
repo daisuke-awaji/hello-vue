@@ -1,18 +1,12 @@
 language: node_js
 node_js:
   - "6"
-addons:
-  chrome: stable
 dist: trusty
-addons:
-  apt:
-  sources:
-    - google-chrome
-  packages:
-    - google-chrome-stable
 sudo: false
 cache: npm
-script: npm run test-travis
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install openjdk-8-jdk
 notifications:
   email:
     on_success: never
